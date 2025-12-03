@@ -1,0 +1,62 @@
+.restaurant-page {
+  font-family: Arial, sans-serif;
+  background: url("https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg?auto=compress&cs=tinysrgb&w=600")
+    no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.menu-container {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.396);
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #b12704;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.price {
+  color: #b12704;
+  font-weight: bold;
+}

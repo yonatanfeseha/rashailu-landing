@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import img1 from "@/assets//img1.jpg";
+import img1 from "@/assets/img1.jpg";
 import img2 from "@/assets/img2.jpg";
 import img3 from "@/assets/img3.jpg";
 import img4 from "@/assets/img4.jpg";
@@ -24,44 +24,53 @@ const newsItems = [
   {
     id: 1,
     images: [img1, img2, img3],
-    title: "Youth Basketball Training Program Launch",
+    title: "",
     description:
-      "በአዲስአበባ ከተማ አስተዳደር ወጣቶች እና ስፖርት ቢሮ የራስኃይሉ ስፖርት ትምህርትና ስልጠና ማዕከል የልዩ ስልጠና ሰልጣኞች...",
+      "በአዲስአበባ ከተማ አስተዳደር ወጣቶች እና ስፖርት ቢሮ የራስኃይሉ ስፖርት ትምህርትና ስልጠና ማዕከል የልዩ ስልጠና ሰልጣኞች ከልምምድ በኋላ የምግብ አገልግሎታቸውን ጀምረዋል፡፡ እድሜያቸው ከ11 ዓመት በታች የሆናቸው ታዳጊ ወጣቶች በማእከሉ ስልጠና የጀመሩት ከሁለት ዓመት በፊት ቢሆንም የምግብ አገልግሎት ሳያገኙ ስልጠናውን የሚከታተሉ ቢሆንም የማዕከሉ አመራር ባደረገው ከፍተኛ ጥረት ከጥር 6/2017 ዓ.ም ጀምሮ በሳምንት ሶስት ቀናት ከሚኖራቸው ስልጠና በኋላ በማእከሉ የስፖርትና መዝናኛ ቡድን አማካይነት አገልግሎቱ የሚቀጥል ይሆናል፡፡",
+    more: "ማዕከሉ በቅርጫት ኳስ፣ በቴኒስ እና በካራቴስፖርት 40 ወንድና 40 ሴት በድምሩ ለ80 ሰልጣኞች ስልጠናእ የሰጠ የሚገኝ ሲሆን ጥር 6 ስልጠና የነበራቸው የቅርጫትኳስና ቴኒስ ሰልጣኞች በምገባው መክፈቻ ፕሮግራም ላይ እያሉ የማዕከሉ ስራ አስኪያጅ አቶ በኃይሉ በቀለ፣ የስፖርት ትምህርት ስልጠና ቡድን መሪ አቶ ዮሴፍ ሳህሉ እና የስፖርትና መዝናኛ ቡድን መሪ ወ/ሪት አትጠገብ ተገኝተው ለሠልጣኞቹ ምገባው እንደሚቀጥል እና ከስፖርቱ በተጨማሪ በመደበኛት ትምህርታቸውም የላቀ ውጤት እንዲያመጡ ማዕከሉም በዚህ ዙሪያ ድጋፍና ክትትል እንደሚያደርግ ለሰልጣኞቹ አሳስበዋቸዋል። በመርሐግብሩ ላይ የቅርጫት ኳስአሰልጣን ደረጀ ተገኝቷል፡፡",
   },
   {
     id: 2,
     images: [img4, img5, img6],
-    title: "Tennis Academy Expansion",
-    description: "የራስ ኃይሉ ስፖርት ትምህርትና ስልጠና ማዕከል ሰራተኞች ዘወትር አርብ...",
+    title: "",
+    description:
+      "የራስ ኃይሉ ስፖርት ትምህርትና ስልጠና ማዕከል ሰራተኞች ዘወትር አርብ ከጠዋቱ 1፡30 እስከ 2፡30 ግቢያቸውን በማጽዳት ሥራ ላይ",
   },
   {
     id: 3,
     images: [img7, img8],
-    title: "Karate Championship Success",
-    description: "በ አዲስአበባ ወጣቶችና ስፖርት ቢሮ የራስኃይሉ ስፖርት ትምህርት...",
+    title: "",
+    description:
+      "በ አዲስአበባ ወጣቶችና ስፖርት ቢሮ የራስኃይሉ ስፖርት ትምህርትና ስልጠና ማዕከል የታዳጊ ወጣቶች ስፖርት ስልጠና ልማት ፕሮግራም የልዩ ስልጠና ተሳታፊዎች ምገባ ለመጀመሪያ ጊዜ ጥር 6/2017 ዓ.ም የቴኒስና ቅርጫትኳስ ሰልጣኞች መጀመራቸውይታወሳል።",
+    more: "ቀሪዎቹ የካራቴ ሰልጣኞች ጥር 7/2017 ዓ.ም በዚህ መልኩ ምግባቸውን አድርገዋል። ከዚህ በኋላ በሳምንት ሦስት ቀናት በሚኖራቸው ስልጠና ምገባውየሚቀጥልይሆናል፤",
   },
   {
-    id: 3,
+    id: 4,
     images: [img10, img11, img12],
-    title: "Karate Championship Success",
-    description: "በ አዲስአበባ ወጣቶችና ስፖርት ቢሮ የራስኃይሉ ስፖርት ትምህርት...",
+    title: "",
+    description:
+      "የ ራስኃይሉ ስ/ት/ስ/ማሰራተኞችበ22/05/2017 ዓ.ም በራሳቸው ተነሳሽነት የአብሮነትና የአንድነት ፕሮግራም በማዘጋጀት ያላቸውን ተግባቦት አሳይተዋል።",
   },
   {
-    id: 3,
+    id: 5,
     images: [img13, img14, img15],
-    title: "Karate Championship Success",
-    description: "በ አዲስአበባ ወጣቶችና ስፖርት ቢሮ የራስኃይሉ ስፖርት ትምህርት...",
+    title: "",
+    description:
+      "የራስኃይሉ ስፖርት ትምህርት ስልጠና ማዕከል ሠራተኞች አዲስአበባን በመወከል በሀገርአቀፉ የታዳጊ ምዘና ውድድር ላይ ለሚሳተፉ አካላት ለሚካሄደው የሽኝት መርሐግብር በምግብ ዝግጅት ሥራ ላይ ጥር 22/2017ዓ.ም።",
   },
   {
-    id: 3,
+    id: 6,
     images: [img16, img17, img18, img19],
-    title: "Karate Championship Success",
-    description: "በ አዲስአበባ ወጣቶችና ስፖርት ቢሮ የራስኃይሉ ስፖርት ትምህርት...",
+    title: "",
+    description:
+      "ጥር 24/2017ዓ.ም የአዲስአበባ ወጣቶችና ስፖርት ቢሮ አዲስአበባን ወክሎ በሀገርአቀፍ የታዳጊ ወጣቶች የምዘና ውድድር ላይ በ12 የስፖርት ዓይነት ለሚሳተፈው የልዑካን ቡድንበራስኃይሉ ስፖርትትምህርትናስልጠናማዕከል በተካሄደ የሽኝት መርሐግብር ላይ የቢሮው ኃላፊአቶበላይደጀን...",
+    more: "የምዘና ውድድርን በፍጹም ስፖርታዊ ጨዋነት አጠናቃችሁ እንድትመለሱ እመኛለሁ በማለት መልዕክትያስተላልፉና የአዲስአበባከተማ አስተዳደርን ስፖርት ምክርቤት አርማን ለስፖርተኞች ተወካዮች ያስረከቡ ሲሆን ማዕከሉም ለልዑክንቡድኑና በሽኝት መርሐግብሩ ላይ ለተሳተፉ ከ600 በላይ ለሚሆኑ አካላት የምግብ መስተንግዶ ሰጥቷል፡፡",
   },
 ];
 
-const NewsCard = ({ item }) => {
+const NewsCard = ({ item }: { item: (typeof newsItems)[0] }) => {
   const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
 
   const next = () => setIndex((prev) => (prev + 1) % item.images.length);
   const prev = () =>
@@ -76,11 +85,7 @@ const NewsCard = ({ item }) => {
           alt={item.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-
-        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-
-        {/* Controls */}
         <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
           <Button
             variant="secondary"
@@ -90,8 +95,6 @@ const NewsCard = ({ item }) => {
           >
             <ChevronLeft className="w-5 h-5" />
           </Button>
-
-          {/* Dots */}
           <div className="flex gap-2">
             {item.images.map((_, i) => (
               <button
@@ -103,7 +106,6 @@ const NewsCard = ({ item }) => {
               />
             ))}
           </div>
-
           <Button
             variant="secondary"
             size="icon"
@@ -122,39 +124,32 @@ const NewsCard = ({ item }) => {
           <p className="text-muted-foreground leading-relaxed">
             {item.description}
           </p>
-          <Button className="mt-6" variant="outline">
-            Read More
-          </Button>
-        </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-3 gap-4">
-          {[
-            { value: "80+", label: "Students" },
-            { value: "3", label: "Sports" },
-            { value: "5+", label: "Coaches" },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="text-center p-4 rounded-xl bg-secondary/50 border border-border"
-            >
-              <p className="font-heading font-bold text-2xl lg:text-3xl text-primary">
-                {stat.value}
-              </p>
-              <p className="text-muted-foreground text-sm">{stat.label}</p>
-            </div>
-          ))}
+          {/* Read More only for ids 1,3,6 */}
+          {[1, 3, 6].includes(item.id) && (
+            <>
+              <Button
+                className="mt-6"
+                variant="outline"
+                onClick={() => setShowMore(!showMore)}
+              >
+                {showMore ? "Show Less" : "Read More"}
+              </Button>
+              {showMore && (
+                <p className="text-muted-foreground mt-4">{item.more}</p>
+              )}
+            </>
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-export const NewsSection = () => {
+const NewsSection = () => {
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-12">
           <p className="text-primary font-heading font-medium tracking-wider mb-2">
             LATEST
@@ -168,7 +163,6 @@ export const NewsSection = () => {
           </p>
         </div>
 
-        {/* All News Cards */}
         {newsItems.map((item) => (
           <NewsCard key={item.id} item={item} />
         ))}
@@ -176,3 +170,5 @@ export const NewsSection = () => {
     </section>
   );
 };
+
+export default NewsSection;

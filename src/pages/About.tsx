@@ -5,45 +5,26 @@ const values = [
   {
     icon: Target,
     title: "Excellence",
-    description: "We strive for excellence in everything we do, setting high standards for our athletes and coaches.",
+    description:
+      "We strive for excellence in everything we do, setting high standards for our athletes and coaches.",
   },
   {
     icon: Users,
     title: "Teamwork",
-    description: "We believe in the power of collaboration and building strong, supportive communities.",
+    description:
+      "We believe in the power of collaboration and building strong, supportive communities.",
   },
   {
     icon: Award,
     title: "Discipline",
-    description: "We instill discipline and dedication as the foundation for success in sports and life.",
+    description:
+      "We instill discipline and dedication as the foundation for success in sports and life.",
   },
   {
     icon: Heart,
     title: "Passion",
-    description: "We nurture a genuine love for sports and physical activity in all our students.",
-  },
-];
-
-const team = [
-  {
-    name: "Ato Behailu Bekele",
-    role: "Center Director",
-    description: "Leading our center with over 15 years of experience in sports management and youth development.",
-  },
-  {
-    name: "Coach Daniel",
-    role: "Head Basketball Coach",
-    description: "Former professional player with extensive coaching experience at national and regional levels.",
-  },
-  {
-    name: "Coach Sara",
-    role: "Tennis Instructor",
-    description: "Certified tennis coach with international training certifications and competitive experience.",
-  },
-  {
-    name: "Sensei Mekonnen",
-    role: "Karate Master",
-    description: "5th Dan black belt with decades of experience in traditional karate instruction.",
+    description:
+      "We nurture a genuine love for sports and physical activity in all our students.",
   },
 ];
 
@@ -60,8 +41,8 @@ const About = () => {
             About Us
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Discover our mission, values, and the dedicated team behind
-            Ras Hailu Sport Education & Training Center.
+            Discover our mission, values, and the dedicated team behind Ras
+            Hailu Sport Education & Training Center.
           </p>
         </div>
       </section>
@@ -78,15 +59,21 @@ const About = () => {
                 Empowering Youth Through Sports
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Under the Addis Ababa City Administration Youth and Sports Bureau,
-                Ras Hailu Sport Education & Training Center is dedicated to providing
-                quality sports education and training to young people.
+                Under the Addis Ababa City Administration Youth and Sports
+                Bureau, Ras Hailu Sport Education & Training Center is dedicated
+                to providing quality sports education and training to young
+                people.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                Our vision is to create a society that is healthy, capable, and
+                beneficial to citizens, with sports as its culture.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                We offer specialized training programs in basketball, tennis, and karate,
-                serving 80 students (40 male and 40 female) with comprehensive support
-                including nutrition programs. Our goal is to develop well-rounded athletes
-                who excel both on and off the field.
+                Values: Accountability, Transparency, Providing excellent
+                service, Readiness for change Leading with knowledge and faith
+                /Working/, Creating a convenient and preferred institution,
+                Creating a society that has made sports its culture and
+                producing competent athletes
               </p>
             </div>
             <div className="relative">
@@ -127,40 +114,12 @@ const About = () => {
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <value.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-heading font-bold text-xl mb-2">{value.title}</h3>
-                <p className="text-muted-foreground text-sm">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-primary font-heading font-medium tracking-wider mb-2">
-              OUR TEAM
-            </p>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl">
-              Meet Our Leadership
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className="group text-center p-6 rounded-xl card-gradient border border-border hover:border-primary/50 transition-all duration-300"
-              >
-                <div className="w-20 h-20 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <span className="font-heading font-bold text-2xl text-primary">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="font-heading font-bold text-lg">{member.name}</h3>
-                <p className="text-primary text-sm mb-3">{member.role}</p>
-                <p className="text-muted-foreground text-sm">{member.description}</p>
+                <h3 className="font-heading font-bold text-xl mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>

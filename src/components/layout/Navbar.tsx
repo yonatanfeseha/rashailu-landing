@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -11,20 +11,21 @@ import {
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Home", href: "/" },
+  { name: "News", href: "/" },
   { name: "History", href: "/history" },
   {
     name: "Our Services",
     href: "/services",
     dropdown: [
-      { name: "Basketball", href: "/services#basketball" },
-      { name: "Tennis", href: "/services#tennis" },
-      { name: "Karate", href: "/services#karate" },
+      { name: "Restaurant", href: "/services/restaurant" },
+      {
+        name: "Sports & Entertainment",
+        href: "/services/sports-entertainment",
+      },
     ],
   },
   { name: "About Us", href: "/about" },
   { name: "Training", href: "/training" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {
@@ -51,11 +52,12 @@ export const Navbar = () => {
                     <Button
                       variant="nav"
                       className={cn(
-                        "px-4",
-                        location.pathname === link.href && "text-primary"
+                        "px-4 flex items-center gap-1",
+                        location.pathname.startsWith(link.href) &&
+                          "text-primary"
                       )}
                     >
-                      {link.name}
+                      {link.name} <ChevronDown className="w-4 h-4" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-card border-border">
@@ -103,19 +105,36 @@ export const Navbar = () => {
           <div className="lg:hidden py-4 border-t border-border animate-slide-up">
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={cn(
-                    "px-4 py-2 rounded-md transition-colors",
-                    location.pathname === link.href
-                      ? "bg-primary/10 text-primary"
-                      : "hover:bg-secondary"
+                <div key={link.name}>
+                  <Link
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "px-4 py-2 rounded-md transition-colors flex justify-between items-center",
+                      location.pathname === link.href
+                        ? "bg-primary/10 text-primary"
+                        : "hover:bg-secondary"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+
+                  {/* Mobile dropdown */}
+                  {link.dropdown && (
+                    <div className="ml-4 mt-1 flex flex-col gap-1">
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className="px-4 py-2 rounded-md text-sm hover:bg-secondary"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
                   )}
-                >
-                  {link.name}
-                </Link>
+                </div>
               ))}
             </div>
           </div>

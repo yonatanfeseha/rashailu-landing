@@ -1,27 +1,33 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import kt from "@/assets/karate.jpg";
 
 const programs = [
   {
     id: 1,
     title: "Basketball",
-    description: "Professional basketball training for youth athletes with focus on fundamentals, teamwork, and competitive play.",
-    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop",
+    description:
+      "Professional basketball training for youth athletes with focus on fundamentals, teamwork, and competitive play.",
+    image:
+      "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop",
     students: "40",
   },
   {
     id: 2,
     title: "Tennis",
-    description: "Learn tennis from certified coaches with modern facilities and personalized training programs.",
-    image: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=600&h=400&fit=crop",
+    description:
+      "Learn tennis from certified coaches with modern facilities and personalized training programs.",
+    image:
+      "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=600&h=400&fit=crop",
     students: "20",
   },
   {
     id: 3,
     title: "Karate",
-    description: "Traditional karate training focusing on discipline, self-defense, and physical fitness.",
-    image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&h=400&fit=crop",
+    description:
+      "Traditional karate training focusing on discipline, self-defense, and physical fitness.",
+    image: kt,
     students: "20",
   },
 ];
@@ -63,7 +69,9 @@ export const ProgramsSection = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-heading font-bold text-xl">{program.title}</h3>
+                  <h3 className="font-heading font-bold text-xl">
+                    {program.title}
+                  </h3>
                   <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">
                     {program.students} Students
                   </span>

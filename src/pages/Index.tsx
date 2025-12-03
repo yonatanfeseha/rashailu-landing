@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { HeroSection } from "@/components/home/HeroSection";
-import { NewsSection } from "@/components/home/NewsSection";
+import NewsSection from "@/components/home/NewsSection";
 import { ProgramsSection } from "@/components/home/ProgramsSection";
 
 const Index = () => {
