@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { Target, Users, Award, Heart } from "lucide-react";
+import kt from "@/assets/karate.jpg";
 
 const values = [
   {
@@ -79,13 +80,13 @@ const About = () => {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=600&h=600&fit=crop"
+                  src={kt}
                   alt="Youth athletes training"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl">
-                <p className="font-heading font-bold text-4xl">80+</p>
+                <p className="font-heading font-bold text-4xl">200+</p>
                 <p className="text-sm">Active Students</p>
               </div>
             </div>

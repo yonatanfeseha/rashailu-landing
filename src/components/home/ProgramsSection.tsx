@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import kt from "@/assets/karate.jpg";
+import basket from "@/assets/basket.jpg";
+import tennis from "@/assets/tennis.jpg";
+import box from "@/assets/box.jpg";
 
 const programs = [
   {
@@ -9,8 +12,7 @@ const programs = [
     title: "Basketball",
     description:
       "Professional basketball training for youth athletes with focus on fundamentals, teamwork, and competitive play.",
-    image:
-      "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop",
+    image: basket,
     students: "40",
   },
   {
@@ -18,8 +20,7 @@ const programs = [
     title: "Tennis",
     description:
       "Learn tennis from certified coaches with modern facilities and personalized training programs.",
-    image:
-      "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=600&h=400&fit=crop",
+    image: tennis,
     students: "20",
   },
   {
@@ -28,7 +29,15 @@ const programs = [
     description:
       "Traditional karate training focusing on discipline, self-defense, and physical fitness.",
     image: kt,
-    students: "20",
+    students: "40",
+  },
+  {
+    id: 4,
+    title: "Box Sport",
+    description:
+      "Professional basketball training for youth athletes with focus on fundamentals, teamwork, and competitive play.",
+    image: box,
+    students: "40",
   },
 ];
 
@@ -45,12 +54,12 @@ export const ProgramsSection = () => {
               Training Programs
             </h2>
           </div>
-          <Link to="/services">
+          {/* <Link to="/services">
             <Button variant="outline" className="group">
               View All Programs
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </Link>
+          </Link> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -79,12 +88,12 @@ export const ProgramsSection = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                   {program.description}
                 </p>
-                <Link to={`/services#${program.title.toLowerCase()}`}>
+                {/* <Link to={`/services#${program.title.toLowerCase()}`}>
                   <Button variant="ghost" size="sm" className="group/btn -ml-2">
                     Learn More
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           ))}
